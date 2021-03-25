@@ -1,0 +1,21 @@
+{
+  "name": "web-test-runner-example",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "web-test-runner \"src/**/*.test.js\""
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "next",
+    "@testing-library/svelte": "^3.0.3",
+    "@web/test-runner": "^0.12.17",
+    "chai": "^4.3.4",
+    "svelte": "^3.35.0",
+    "vite": "^2.1.3",
+    "vite-web-test-runner-plugin": "file:../.."
+  },
+  "dependencies": {}
+}
