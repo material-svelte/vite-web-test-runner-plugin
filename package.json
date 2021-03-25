@@ -13,5 +13,9 @@
   },
   "dependencies": {
     "vite": "^2.1.2"
-  }
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ]
 }
