@@ -4,7 +4,7 @@ import App from './App.vue';
 
 describe('<App>', () => {
   it('renders vue documentation link', () => {
-    const { getByText } = render(<App />);
+    const { getByText } = render(App);
     const linkElement = getByText(/Vue 3 Documentation/i);
     expect(document.body.contains(linkElement));
   });

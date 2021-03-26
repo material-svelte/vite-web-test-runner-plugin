@@ -3,6 +3,11 @@ module.exports = {
   plugins: [
     vite(),
   ],
+  coverageConfig: {
+    include: [
+      'src/**/*.{svelte,js,jsx,ts,tsx}'
+    ]
+  },
   testRunnerHtml: testFramework => `
     <html>
       <head>
