@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "test": "web-test-runner \"src/**/*.test.jsx\""
+    "test": "web-test-runner \"src/**/*.test.jsx\" --coverage"
   },
   "dependencies": {
     "react": "^17.0.0",

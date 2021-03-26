@@ -3,6 +3,11 @@ module.exports = {
   plugins: [
     vite(),
   ],
+  coverageConfig: {
+    include: [
+      'src/**/*.{vue,js,jsx,ts,tsx}'
+    ]
+  },
   testRunnerHtml: testFramework => `
     <html>
       <head>

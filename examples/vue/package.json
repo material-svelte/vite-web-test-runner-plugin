@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "test": "web-test-runner \"src/**/*.test.js\""
+    "test": "web-test-runner \"src/**/*.test.js\" --coverage"
   },
   "dependencies": {
     "vue": "^3.0.5"
