@@ -1,6 +1,6 @@
 {
   "name": "vite-web-test-runner-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,11 +8,11 @@
     "lint": "prettier --check \"*.js\""
   },
   "devDependencies": {
-    "@web/test-runner": "^0.12.17",
+    "@web/test-runner": "^0.12.20",
     "prettier": "^2.2.1"
   },
-  "dependencies": {
-    "vite": "^2.1.2"
+  "peerDependencies": {
+    "vite": "2.x"
   },
   "files": [
     "index.js",
