@@ -4,11 +4,11 @@ A [@web/test-runner](https://modern-web.dev/docs/test-runner/overview/) plugin t
 
 ## Usage
 
-```
+```bash
 npm install vite-web-test-runner-plugin --save-dev
 ```
 
-```
+```js
 // web-test-runner.config.js
 const vite = require('vite-web-test-runner-plugin');
 
