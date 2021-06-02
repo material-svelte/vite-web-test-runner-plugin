@@ -17,10 +17,10 @@ module.exports = {
   testRunnerHtml: testFramework => `
     <html>
       <head>
-        <script>
+        <script type="module">
           // Note: globals expected by @testing-library/svelte
-          global = window;
-          process = { env: {} };
+          window.global = window;
+          window.process = { env: {} };
         </script>
         <script type="module" src="${testFramework}"></script>
       </head>
