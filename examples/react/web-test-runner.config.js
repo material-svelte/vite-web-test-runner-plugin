@@ -1,4 +1,10 @@
 const vite = require('vite-web-test-runner-plugin');
+
+const ignoredBrowserLogs = [
+  '[vite] connecting...',
+  '[vite] connected.',
+];
+
 module.exports = {
   plugins: [
     vite(),
@@ -25,4 +31,7 @@ module.exports = {
       </head>
     </html>
   `,
+  filterBrowserLogs: ({ args }) => {
+    return !args.some((arg) => ignoredBrowserLogs.includes(arg));
+  },
 };
