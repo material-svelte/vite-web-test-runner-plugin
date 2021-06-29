@@ -4,11 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write \"*.js\"",
-    "lint": "prettier --check \"*.js\""
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint --ext .js .",
+    "lint:fix": "eslint --ext .js --fix ."
   },
   "devDependencies": {
     "@web/test-runner": "^0.12.20",
+    "eslint": "^7.29.0",
     "prettier": "^2.2.1"
   },
   "peerDependencies": {
