@@ -12,8 +12,9 @@ module.exports = function () {
       });
       await server.listen();
       const port = server.config.server.port;
+      const protocol = server.config.server.https ? "https" : "http"
       app.use((ctx, next) => {
-        ctx.redirect(`http://localhost:${port}${ctx.originalUrl}`);
+        ctx.redirect(`${protocol}://localhost:${port}${ctx.originalUrl}`);
         return;
       });
     },
