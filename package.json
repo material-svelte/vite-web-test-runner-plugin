@@ -7,11 +7,14 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "eslint --ext .js .",
-    "lint:fix": "eslint --ext .js --fix ."
+    "lint:fix": "eslint --ext .js --fix .",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@web/test-runner": "^0.12.20",
     "eslint": "^7.29.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.2.1"
   },
   "peerDependencies": {
