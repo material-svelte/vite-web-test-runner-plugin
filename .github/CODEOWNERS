@@ -1,0 +1,14 @@
+# vi: ft=codeowners
+*                     @material-svelte/maintainers
+
+/.github/             @material-svelte/admins
+
+# all cosmicconfig extensions
+*.config.cjs          @material-svelte/admins
+*.config.js           @material-svelte/admins
+.*rc                  @material-svelte/admins
+.*rc.cjs              @material-svelte/admins
+.*rc.js               @material-svelte/admins
+.*rc.json             @material-svelte/admins
+.*rc.yaml             @material-svelte/admins
+
