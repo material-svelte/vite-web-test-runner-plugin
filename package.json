@@ -1,6 +1,6 @@
 {
   "name": "vite-web-test-runner-plugin",
-  "version": "0.0.3",
+  "version": "0.0.0-semantic-release",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,17 +8,21 @@
     "format:fix": "prettier --write .",
     "lint": "eslint --ext .js .",
     "lint:fix": "eslint --ext .js --fix .",
-    "prepare": "is-ci || husky install"
+    "prepare": "is-ci || husky install",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@web/test-runner": "^0.12.20",
     "eslint": "^7.29.0",
     "husky": "^6.0.0",
     "is-ci": "^3.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "semantic-release": "^17.4.4"
   },
   "peerDependencies": {
     "vite": "2.x"
@@ -26,5 +30,9 @@
   "files": [
     "index.js",
     "README.md"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/material-svelte/vite-web-test-runner-plugin.git"
+  }
 }
