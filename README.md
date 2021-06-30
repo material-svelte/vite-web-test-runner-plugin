@@ -10,7 +10,7 @@ npm install vite-web-test-runner-plugin --save-dev
 
 ```js
 // web-test-runner.config.js
-const vite = require('vite-web-test-runner-plugin');
+const vite = require("vite-web-test-runner-plugin");
 
 module.exports = {
   plugins: [vite()],
