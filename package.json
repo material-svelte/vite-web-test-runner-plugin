@@ -11,6 +11,8 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@web/test-runner": "^0.12.20",
     "eslint": "^7.29.0",
     "husky": "^6.0.0",
