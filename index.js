@@ -1,26 +1,26 @@
 const vite = require("vite");
 
 module.exports = function () {
-  let server;
+  /** @type {import('vite').ViteDevServer } */
+  let server
 
   return {
-    name: "vite-plugin",
-
-    async serverStart({ app }) {
-      server = await vite.createServer({
-        clearScreen: false,
-      });
-      await server.listen();
-      const port = server.config.server.port;
-      const protocol = server.config.server.https ? "https" : "http";
-      app.use((ctx, next) => {
-        ctx.redirect(`${protocol}://localhost:${port}${ctx.originalUrl}`);
-        return;
-      });
+    name: 'vite-plugin',
+    async serverStart({app}) {
+      server = await vite.createServer({clearScreen: false})
+      await server.listen()
     },
-
     async serverStop() {
-      return server.close();
+      await server.close()
     },
-  };
+    async serve({request, response, app, originalUrl, req, res, socket}) {
+      if (isTestRunnerFile(request.url)) return
+      return {body: (await server.transformRequest(request.url)).code}
+    },
+    transformImport({source}) {
+      if (!isTestFilePath(source) || isTestRunnerFile(source)) return
+      const {port, https, host} = server.config.server
+      return `${https ? 'https' : 'http'}://${host ?? 'localhost'}:${port ?? 80}${source}`
+    },
+  }
 };
