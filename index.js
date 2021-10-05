@@ -1,5 +1,5 @@
 const vite = require("vite");
-
+const {isTestFilePath} = require('@web/test-runner')
 
 
 module.exports = function () {
