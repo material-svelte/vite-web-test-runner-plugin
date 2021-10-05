@@ -1,9 +1,13 @@
 const vite = require("vite");
 
-module.exports = function () {
-  /** @type {import('vite').ViteDevServer } */
-  let server
 
+
+module.exports = function () {
+  /** @type { import('vite').ViteDevServer } */
+  let server
+  /** @type { (url: string) => boolean } */
+  const isTestRunnerFile = url => url.startsWith('/__web-dev-server') || url.startsWith('/__web-test-runner')
+  
   return {
     name: 'vite-plugin',
     async serverStart({app}) {
