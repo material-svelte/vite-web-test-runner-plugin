@@ -8,6 +8,7 @@ module.exports = function () {
 
     async serverStart({ app }) {
       server = await vite.createServer({
+        mode: "TESTING",
         clearScreen: false,
       });
       await server.listen();
