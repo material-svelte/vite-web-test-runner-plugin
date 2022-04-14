@@ -1,6 +1,6 @@
 const vite = require("vite");
 
-module.exports = function () {
+module.exports = function (viteConfig) {
   let server;
 
   return {
@@ -9,6 +9,7 @@ module.exports = function () {
     async serverStart({ app }) {
       server = await vite.createServer({
         clearScreen: false,
+        ...viteConfig,
       });
       await server.listen();
       const port = server.config.server.port;
