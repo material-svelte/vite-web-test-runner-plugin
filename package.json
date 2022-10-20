@@ -25,7 +25,7 @@
     "semantic-release": "^17.4.4"
   },
   "peerDependencies": {
-    "vite": "2.x"
+    "vite": "^3.x"
   },
   "files": [
     "index.js",
