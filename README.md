@@ -5,6 +5,12 @@
 </p>
 <br/>
 
+# Unmaintened project
+
+Use the alternative package: [@remcovaes/web-test-runner-vite-plugin](https://github.com/remcovaes/web-test-runner-vite-plugin)
+
+---
+
 # vite-web-test-runner-plugin
 
 A [@web/test-runner](https://modern-web.dev/docs/test-runner/overview/) plugin to test Vite-powered projects. This plugin automatically connects to the Vite project in the current directory, loads the project configuration, and the uses your already-configured Vite build pipeline to build each test file.
